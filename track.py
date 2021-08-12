@@ -143,6 +143,8 @@ def detect(opt):
                         id = output[4]
                         cls = output[5]
 
+                        print(bboxes)
+
                         c = int(cls)  # integer class
                         label = f'{id} {names[c]} {conf:.2f}'
                         color = compute_color_for_id(id)
