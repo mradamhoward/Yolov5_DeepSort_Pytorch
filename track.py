@@ -144,6 +144,9 @@ def detect(opt):
                         cls = output[5]
 
                         print(bboxes)
+                        line = [0, (img.shape[1] / 2), img.shape[0], (img.shape[1] / 2)]
+
+                        cv2.line(img, (line[0], [line[1]), (line[2], line[3]), (0, 255, 0), 3)
 
                         c = int(cls)  # integer class
                         label = f'{id} {names[c]} {conf:.2f}'
